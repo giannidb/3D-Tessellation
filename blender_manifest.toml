@@ -1,0 +1,32 @@
+# Blender Extension Manifest
+
+schema_version = "1.0.0"
+
+id = "tessellation_3d"
+version = "2.3.0"
+name = "3D Tessellation"
+tagline = "Delaunay + Voronoi, Lloyd relaxation, adaptive density, and Smooth SFD edge smoothing"
+maintainer = "Ergo Cogito Design"
+type = "add-on"
+
+tags = ["Mesh", "Modeling", "3D View", "Tessellation", "Voronoi", "Delaunay"]
+
+blender_version_min = "5.0.1"
+
+license = ["SPDX:GPL-3.0-or-later"]
+copyright = ["2026 Ergo Cogito Design"]
+
+[build]
+paths_exclude_pattern = [
+    "__pycache__/",
+    "*.pyc",
+    ".git/",
+    ".gitignore",
+    "*.blend1",
+    "*.blend2",
+    ".DS_Store"
+]
+
+[permissions]
+network = "Install scipy dependency via pip"
+files = "Read and write mesh data"
