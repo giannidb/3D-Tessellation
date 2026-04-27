@@ -2,6 +2,19 @@
 
 ## L'Addon Definitivo Unificato
 
+💡 **Come è nata l'idea?**
+Osservando la struttura interna delle ossa — un tessuto spugnoso straordinariamente leggero e resistente — ho cercato di simularne la geometria, nota in ambito medico come trabecolatura ossea.
+
+Le trabecole sono disposte in modo da ottimizzare la resistenza occupando il minor spazio possibile, seguendo le linee di forza meccanica.
+
+Lavorando con Blender, non ho trovato strumenti nativi in grado di riprodurre fedelmente tale struttura. I pochi progetti esistenti usano Rhino con il plugin Grasshopper, che adotta un paradigma parametrico a nodi.
+
+Ho replicato un approccio analogo in Blender 5 sfruttando il sistema Geometry Nodes. Il principale ostacolo: suddividere un volume 3D in celle di Voronoi o tetraedri di Delaunay. Gli strumenti nativi coprono solo la tassellatura 2D; l'unico addon esistente (Cell Fracture) mantiene le celle separate, per simulare fratture — non per generare strutture continue.
+
+Per superare questi limiti, con il supporto dell'intelligenza artificiale, ho sviluppato uno script Python che esegue la tassellatura direttamente in Blender, a partire da una mesh manifold. Al codice ho affiancato un gruppo di nodi Geometry Nodes — Smooth SFD — che trasforma il grafo in una mesh continua e raccordata, molto simile alla trabecolatura ossea.
+
+<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/e9618a71-6dc5-4bd0-b6ee-7ec2e5c984bf" />
+
 Combina il meglio di tutte le versioni precedenti in un **unico addon completo**:
 
 ✅ **Delaunay 3D** (da v1.5.0)  
@@ -107,6 +120,8 @@ ADESSO (Lloyd weight-aware):
 6. Done!
 ```
 
+<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/180fcaec-e5c4-4413-95ce-1d6a5fd2149c" />
+
 #### Use Weight Paint
 ```
 Abilita densità adattiva basata su vertex group
@@ -187,11 +202,22 @@ GPL-3.0 or later
 
 ---
 
----
-
 # 3D Tessellation v2.3 🎯 — English Version
 
 ## The Ultimate Unified Addon
+
+💡 **How did the idea come about?**
+By observing the internal structure of bones — an extraordinarily light and strong spongy tissue — I sought to simulate its geometry, known in medicine as trabecular bone.
+
+Trabeculae are arranged to optimize resistance while occupying the least possible space, following the lines of mechanical force.
+
+Working with Blender, I found no native tools capable of faithfully reproducing such a structure. The few existing projects use Rhino with the Grasshopper plugin, which adopts a node-based parametric paradigm.
+
+I replicated a similar approach in Blender 5 by leveraging the Geometry Nodes system. The main obstacle: subdividing a 3D volume into Voronoi cells or Delaunay tetrahedra. Native tools only cover 2D tessellation; the only existing addon (Cell Fracture) keeps cells separate to simulate fractures — not to generate continuous structures.
+
+To overcome these limitations, with the support of artificial intelligence, I developed a Python script that performs tessellation directly in Blender, starting from a manifold mesh. Alongside the code, I built a Geometry Nodes group — Smooth SFD — that transforms the graph into a smooth, continuous mesh closely resembling trabecular bone.
+
+<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/e9618a71-6dc5-4bd0-b6ee-7ec2e5c984bf" />
 
 Combines the best of all previous versions into a **single, complete addon**:
 
@@ -297,6 +323,8 @@ NOW (weight-aware Lloyd):
 5. Restart Blender
 6. Done!
 ```
+
+<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/180fcaec-e5c4-4413-95ce-1d6a5fd2149c" />
 
 #### Use Weight Paint
 ```
