@@ -1,3 +1,5 @@
+<img width="1200" height="600" alt="Img_hero_1200x600" src="https://github.com/user-attachments/assets/956d1b9e-1749-4ed9-a7bb-28d59e2a0d7e" />
+
 # 3D Tessellation v2.3 🎯
 
 ## L'Addon Definitivo Unificato
