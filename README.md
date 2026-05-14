@@ -1,4 +1,4 @@
-<img width="1200" height="600" alt="Img_hero_1200x600" src="https://github.com/user-attachments/assets/956d1b9e-1749-4ed9-a7bb-28d59e2a0d7e" />
+<img width="1200" height="600" alt="Img_hero_1200x600" src="https://github.com/user-attachments/assets/b112ebbb-6c44-47a9-85b2-020beb8bdb92" />
 
 # 3D Tessellation v2.3 🎯
 
@@ -15,7 +15,7 @@ Ho replicato un approccio analogo in Blender 5 sfruttando il sistema Geometry No
 
 Per superare questi limiti, con il supporto dell'intelligenza artificiale, ho sviluppato uno script Python che esegue la tassellatura direttamente in Blender, a partire da una mesh manifold. Al codice ho affiancato un gruppo di nodi Geometry Nodes — Smooth SFD — che trasforma il grafo in una mesh continua e raccordata, molto simile alla trabecolatura ossea.
 
-<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/e9618a71-6dc5-4bd0-b6ee-7ec2e5c984bf" />
+<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/00ee10ec-32e1-47c5-bc66-8a6e6b7152f0" />
 
 Combina il meglio di tutte le versioni precedenti in un **unico addon completo**:
 
@@ -122,7 +122,7 @@ ADESSO (Lloyd weight-aware):
 6. Done!
 ```
 
-<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/180fcaec-e5c4-4413-95ce-1d6a5fd2149c" />
+<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/b599e2cc-a372-43bc-80ab-1c451cf00b75" />
 
 #### Use Weight Paint
 ```
@@ -219,7 +219,7 @@ I replicated a similar approach in Blender 5 by leveraging the Geometry Nodes sy
 
 To overcome these limitations, with the support of artificial intelligence, I developed a Python script that performs tessellation directly in Blender, starting from a manifold mesh. Alongside the code, I built a Geometry Nodes group — Smooth SFD — that transforms the graph into a smooth, continuous mesh closely resembling trabecular bone.
 
-<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/e9618a71-6dc5-4bd0-b6ee-7ec2e5c984bf" />
+<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/00ee10ec-32e1-47c5-bc66-8a6e6b7152f0" />
 
 Combines the best of all previous versions into a **single, complete addon**:
 
@@ -326,7 +326,7 @@ NOW (weight-aware Lloyd):
 6. Done!
 ```
 
-<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/180fcaec-e5c4-4413-95ce-1d6a5fd2149c" />
+<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/b599e2cc-a372-43bc-80ab-1c451cf00b75" />
 
 #### Use Weight Paint
 ```
