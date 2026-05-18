@@ -27,7 +27,7 @@ from typing import Any, Optional
 bl_info = {
     "name": "3D Tessellation (Delaunay & Voronoi)",
     "author": "Ergo Cogito Design",
-    "version": (2, 3, 0),
+    "version": (2, 3, 1),
     "blender": (5, 0, 1),
     "location": "View3D > Sidebar > Tessellation",
     "description": (
@@ -1664,7 +1664,7 @@ def register() -> None:
         type=TessellationProperties
     )
 
-    print("3D Tessellation v2.3.0 registered.")
+    print("3D Tessellation v2.3.1 registered.")
 
 
 def unregister() -> None:
