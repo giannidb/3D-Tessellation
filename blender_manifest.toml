@@ -16,6 +16,16 @@ blender_version_min = "5.0.1"
 license = ["SPDX:GPL-3.0-or-later"]
 copyright = ["2026 Ergo Cogito Design"]
 
+# scipy is bundled as pre-built wheels for all supported platforms.
+# Blender installs the correct wheel automatically at extension load time;
+# no internet connection or manual pip step is required.
+wheels = [
+    "./wheels/scipy-1.15.3-cp312-cp312-win_amd64.whl",
+    "./wheels/scipy-1.15.3-cp312-cp312-macosx_14_0_arm64.whl",
+    "./wheels/scipy-1.15.3-cp312-cp312-macosx_10_13_x86_64.whl",
+    "./wheels/scipy-1.15.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+]
+
 [build]
 paths_exclude_pattern = [
     "__pycache__/",
@@ -24,9 +34,8 @@ paths_exclude_pattern = [
     ".gitignore",
     "*.blend1",
     "*.blend2",
-    ".DS_Store"
+    ".DS_Store",
 ]
 
 [permissions]
-network = "Install scipy dependency via pip"
 files = "Read and write mesh data"

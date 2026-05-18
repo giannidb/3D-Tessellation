@@ -18,11 +18,8 @@ Additional features:
 from __future__ import annotations
 
 # Standard-library imports must precede third-party and bpy imports.
-import importlib.util
 import math
 import os
-import subprocess
-import sys
 import traceback
 from collections.abc import Callable
 from typing import Any, Optional
@@ -50,75 +47,10 @@ _EPSILON: float = 1e-4
 _EPSILON_FACTOR: int = 10
 
 # ---------------------------------------------------------------------------
-# scipy installation helper
+# scipy — bundled as pre-built wheels in the wheels/ directory.
+# Blender's extension system installs the correct wheel automatically;
+# no runtime pip call is required.
 # ---------------------------------------------------------------------------
-
-
-def ensure_scipy_installed() -> bool:
-    """Verify that *scipy* is importable, installing it when absent.
-
-    Installation targets the user site-packages directory so that no
-    administrator privileges are required.  On Windows, Blender's embedded
-    Python may still need the user to run Blender as Administrator; a clear
-    diagnostic message is printed in that case.
-
-    Returns:
-        ``True`` if scipy is (or becomes) importable, ``False`` otherwise.
-    """
-    if importlib.util.find_spec("scipy") is not None:
-        return True
-
-    python_exe = sys.executable
-
-    try:
-        try:
-            import pip  # noqa: F401
-        except ImportError:
-            print("Installing pip via ensurepip …")
-            subprocess.check_call([python_exe, "-m", "ensurepip", "--default-pip"])
-            subprocess.check_call(
-                [python_exe, "-m", "pip", "install", "--upgrade", "pip"]
-            )
-
-        print("Installing scipy in user directory …  (this may take a minute)")
-        subprocess.check_call(
-            [python_exe, "-m", "pip", "install", "scipy", "--user"]
-        )
-
-        importlib.invalidate_caches()
-
-        import site
-
-        user_site = site.getusersitepackages()
-        if user_site not in sys.path:
-            sys.path.insert(0, user_site)
-            print(f"Added user site-packages to path: {user_site}")
-
-        if importlib.util.find_spec("scipy") is None:
-            raise ImportError(
-                "scipy installation completed but module still not found."
-            )
-
-        print("scipy installed successfully.  Please restart Blender.")
-        return True
-
-    except subprocess.CalledProcessError as exc:
-        print(f"Failed to install scipy: {exc}")
-        print(
-            "\nTroubleshooting:\n"
-            "  On Windows with Blender in Program Files:\n"
-            "    1. Run Blender as Administrator, OR\n"
-            "    2. Install scipy manually from the Command Prompt:\n"
-            f'       "{python_exe}" -m pip install scipy --user\n'
-            "  Then restart Blender."
-        )
-        return False
-    except Exception as exc:  # noqa: BLE001
-        print(f"Failed to install scipy: {exc}")
-        return False
-
-
-scipy_available: bool = ensure_scipy_installed()
 
 import bpy  # noqa: E402
 import bmesh  # noqa: E402
@@ -133,9 +65,7 @@ from bpy.props import (  # noqa: E402
     StringProperty,
 )
 from bpy.types import Operator, Panel, PropertyGroup  # noqa: E402
-
-if scipy_available:
-    from scipy.spatial import ConvexHull, Delaunay, Voronoi  # noqa: E402
+from scipy.spatial import ConvexHull, Delaunay, Voronoi  # noqa: E402
 
 
 # ---------------------------------------------------------------------------
@@ -165,10 +95,6 @@ def lloyd_relaxation_3d(
     Returns:
         Relaxed ``(N, 3)`` coordinate array.
     """
-    if not scipy_available:
-        print("Warning: scipy unavailable — skipping Lloyd relaxation.")
-        return points
-
     points = np.array(points, dtype=np.float64)
 
     if density_weights is None:
@@ -1192,38 +1118,6 @@ class TessellationProperties(PropertyGroup):
 # ---------------------------------------------------------------------------
 
 
-class MESH_OT_check_scipy(Operator):
-    """Check whether scipy is importable and report its version."""
-
-    bl_idname = "mesh.check_scipy"
-    bl_label = "Check scipy"
-
-    def execute(self, context: Any) -> set[str]:
-        """Run the scipy version check."""
-        try:
-            import scipy
-            self.report({"INFO"}, f"scipy {scipy.__version__} is installed.")
-        except ImportError:
-            self.report({"WARNING"}, "scipy is not installed.")
-        return {"FINISHED"}
-
-
-class MESH_OT_install_scipy(Operator):
-    """Install the scipy dependency via pip."""
-
-    bl_idname = "mesh.install_scipy"
-    bl_label = "Install scipy"
-
-    def execute(self, context: Any) -> set[str]:
-        """Trigger the scipy installation routine."""
-        self.report({"INFO"}, "Installing scipy …  This may take a minute.")
-        if ensure_scipy_installed():
-            self.report({"INFO"}, "scipy installed!  Please restart Blender.")
-        else:
-            self.report({"ERROR"}, "Failed to install scipy.  Check the console.")
-        return {"FINISHED"}
-
-
 class MESH_OT_tessellation_3d(Operator):
     """Generate 3-D tessellation (Delaunay or Voronoi Boolean)."""
 
@@ -1241,12 +1135,6 @@ class MESH_OT_tessellation_3d(Operator):
 
     def execute(self, context: Any) -> set[str]:
         """Dispatch to the selected tessellation algorithm."""
-        if not scipy_available:
-            self.report(
-                {"ERROR"}, "scipy not installed!  Click 'Install scipy' first."
-            )
-            return {"CANCELLED"}
-
         obj = context.active_object
         props = context.scene.tessellation_props
 
@@ -1623,21 +1511,13 @@ class VIEW3D_PT_tessellation_3d(Panel):
         box = layout.box()
         box.label(text="3D Tessellation v2.3", icon="MESH_ICOSPHERE")
 
-        # -- scipy -----------------------------------------------------------
+        # -- scipy version info ----------------------------------------------
+        import scipy
         layout.separator()
         box = layout.box()
-        box.label(text="Dependencies:", icon="PACKAGE")
-        row = box.row(align=True)
-        row.operator("mesh.check_scipy", icon="CHECKMARK")
-        row.operator("mesh.install_scipy", icon="IMPORT")
-        if scipy_available:
-            try:
-                import scipy
-                box.label(text=f"✓ scipy {scipy.__version__}", icon="CHECKMARK")
-            except ImportError:
-                box.label(text="✓ scipy (restart required)", icon="INFO")
-        else:
-            box.label(text="✗ scipy not found", icon="ERROR")
+        box.label(
+            text=f"scipy {scipy.__version__} · bundled", icon="CHECKMARK"
+        )
 
         # -- Tessellation type -----------------------------------------------
         layout.separator()
@@ -1724,14 +1604,11 @@ class VIEW3D_PT_tessellation_3d(Panel):
         row.scale_y = 1.8
 
         if obj and obj.type == "MESH":
-            if scipy_available:
-                row.operator(
-                    "mesh.tessellation_3d",
-                    icon="MOD_REMESH",
-                    text="Generate Tessellation",
-                )
-            else:
-                row.label(text="Install scipy first", icon="ERROR")
+            row.operator(
+                "mesh.tessellation_3d",
+                icon="MOD_REMESH",
+                text="Generate Tessellation",
+            )
         else:
             row.label(text="Select a mesh object", icon="ERROR")
 
@@ -1770,8 +1647,6 @@ class VIEW3D_PT_tessellation_3d(Panel):
 
 classes = (
     TessellationProperties,
-    MESH_OT_check_scipy,
-    MESH_OT_install_scipy,
     MESH_OT_tessellation_3d,
     MESH_OT_check_normals,
     MESH_OT_apply_smooth_sfd,
