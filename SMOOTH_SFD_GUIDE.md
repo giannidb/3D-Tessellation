@@ -61,7 +61,6 @@ Cosa fa:
 ├── README.md
 ├── 3D-Tessellation-Documentation.md
 ├── SMOOTH_SFD_GUIDE.md
-├── WINDOWS_SCIPY_GUIDE.md
 └── LICENSE
 3D-Tessellation-2.3.0/wheels/
 	├── scipy-1.15.3-cp313-cp313-macosx_10_13_x86_64.whl
@@ -198,7 +197,6 @@ What it does:
 ├── README.md
 ├── 3D-Tessellation-Documentation.md
 ├── SMOOTH_SFD_GUIDE.md
-├── WINDOWS_SCIPY_GUIDE.md
 └── LICENSE
 3D-Tessellation-2.3.0/wheels/
 	├── scipy-1.15.3-cp313-cp313-macosx_10_13_x86_64.whl
