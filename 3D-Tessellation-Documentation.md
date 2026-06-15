@@ -1,5 +1,5 @@
 # 3D Tessellation — Documentation
-**Version 2.3.1 · Blender 5.0.1+ · Ergo Cogito Design**
+**Version 2.3.2 · Blender 5.0.0+ · Ergo Cogito Design**
 
 ---
 
@@ -14,7 +14,7 @@ The addon ships with **Smooth SFD**, a Geometry Nodes modifier that blends the c
 ## Requirements
 
 - Blender 5.0.1 or later
-- Python package **scipy** (bundled)
+- Python package **scipy** (installed automatically on first use)
 - A **manifold (watertight)** mesh as input
 
 ---
@@ -22,9 +22,17 @@ The addon ships with **Smooth SFD**, a Geometry Nodes modifier that blends the c
 ## Installation
 
 1. In Blender, open **Edit → Preferences → Add-ons**.
-2. Click **Install…** and select `3D-Tessellation-2.3.1.zip`.
+2. Click **Install…** and select `3D-Tessellation-2.3.2.zip`.
 3. Enable the addon by ticking its checkbox.
-4. In the **N-panel → Tessellation** tab.  
+4. In the **N-panel → Tessellation** tab, click **Install scipy**.  
+   The console will confirm when the installation is complete.
+5. **Restart Blender** to make scipy available.
+
+> **Windows note:** if Blender is installed under *Program Files*, run it as Administrator for the scipy installation step, or install scipy manually from the Command Prompt:
+> ```
+> "C:\path\to\blender\<version>\python\bin\python.exe" -m pip install scipy --user
+> ```
+> Then restart Blender normally.
 
 ---
 
@@ -123,6 +131,9 @@ If the asset is not loaded automatically, click **Load Asset Manually**.
 ---
 
 ## Troubleshooting
+
+**scipy not found after installation**  
+Restart Blender completely. If the issue persists on Windows, install scipy manually from the Command Prompt (see Installation above).
 
 **No cells generated (Voronoi)**  
 The source mesh is likely non-manifold. Run **Check & Fix Normals**, then use *Mesh → Clean Up → Merge by Distance* and *Fill Holes* in Edit Mode before retrying.

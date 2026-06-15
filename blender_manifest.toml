@@ -3,7 +3,7 @@
 schema_version = "1.0.0"
 
 id = "tessellation_3d"
-version = "2.3.1"
+version = "2.3.2"
 name = "3D Tessellation"
 tagline = "Delaunay + Voronoi, Lloyd relaxation, adaptive density, and Smooth SFD edge smoothing"
 maintainer = "Ergo Cogito Design"
@@ -11,7 +11,7 @@ type = "add-on"
 
 tags = ["Mesh", "Modeling", "3D View", "Tessellation", "Voronoi", "Delaunay"]
 
-blender_version_min = "5.0.1"
+blender_version_min = "5.0.0"
 
 license = ["SPDX:GPL-3.0-or-later"]
 copyright = ["2026 Ergo Cogito Design"]
@@ -19,11 +19,20 @@ copyright = ["2026 Ergo Cogito Design"]
 # scipy is bundled as pre-built wheels for all supported platforms.
 # Blender installs the correct wheel automatically at extension load time;
 # no internet connection or manual pip step is required.
+#
+# Blender 5.0 → Python 3.11 → cp311 wheels
+# Blender 5.1 → Python 3.12 → cp312 wheels
 wheels = [
-    "./wheels/scipy-1.15.3-cp313-cp313-win_amd64.whl",
-    "./wheels/scipy-1.15.3-cp313-cp313-macosx_14_0_arm64.whl",
-    "./wheels/scipy-1.15.3-cp313-cp313-macosx_10_13_x86_64.whl",
-    "./wheels/scipy-1.15.3-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    # Python 3.11 (Blender 5.0)
+    "./wheels/scipy-1.15.3-cp311-cp311-win_amd64.whl",
+    "./wheels/scipy-1.15.3-cp311-cp311-macosx_14_0_arm64.whl",
+    "./wheels/scipy-1.15.3-cp311-cp311-macosx_10_13_x86_64.whl",
+    "./wheels/scipy-1.15.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    # Python 3.12 (Blender 5.1+)
+    "./wheels/scipy-1.15.3-cp312-cp312-win_amd64.whl",
+    "./wheels/scipy-1.15.3-cp312-cp312-macosx_14_0_arm64.whl",
+    "./wheels/scipy-1.15.3-cp312-cp312-macosx_10_13_x86_64.whl",
+    "./wheels/scipy-1.15.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
 ]
 
 [build]
