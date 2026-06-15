@@ -54,7 +54,7 @@ Cosa fa:
 
 ### Asset Bundled
 ```
-3D-Tessellation-2.3.1/
+3D-Tessellation-2.3.2/
 ├── __init__.py
 ├── Smooth_SFD.blend  ← Asset incluso!
 ├── blender_manifest.toml
@@ -62,11 +62,15 @@ Cosa fa:
 ├── 3D-Tessellation-Documentation.md
 ├── SMOOTH_SFD_GUIDE.md
 └── LICENSE
-3D-Tessellation-2.3.0/wheels/
+3D-Tessellation-2.3.2/wheels/
 	├── scipy-1.15.3-cp313-cp313-macosx_10_13_x86_64.whl
 	├── scipy-1.15.3-cp313-cp313-macosx_14_0_arm64.whl
 	├── scipy-1.15.3-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
 	├── scipy-1.15.3-cp313-cp313-win_amd64.whl
+	├── scipy-1.15.3-cp311-cp311-macosx_10_13_x86_64.whl
+	├── scipy-1.15.3-cp311-cp311-macosx_14_0_arm64.whl
+	├── scipy-1.15.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+	├── scipy-1.15.3-cp311-cp311-win_amd64.whl
 
 ```
 
@@ -190,7 +194,7 @@ What it does:
 
 ### Asset Bundled
 ```
-3D-Tessellation-2.3.1/
+3D-Tessellation-2.3.2/
 ├── __init__.py
 ├── Smooth_SFD.blend  ← Asset incluso!
 ├── blender_manifest.toml
@@ -198,11 +202,15 @@ What it does:
 ├── 3D-Tessellation-Documentation.md
 ├── SMOOTH_SFD_GUIDE.md
 └── LICENSE
-3D-Tessellation-2.3.0/wheels/
+3D-Tessellation-2.3.2/wheels/
 	├── scipy-1.15.3-cp313-cp313-macosx_10_13_x86_64.whl
 	├── scipy-1.15.3-cp313-cp313-macosx_14_0_arm64.whl
 	├── scipy-1.15.3-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
 	├── scipy-1.15.3-cp313-cp313-win_amd64.whl
+	├── scipy-1.15.3-cp311-cp311-macosx_10_13_x86_64.whl
+	├── scipy-1.15.3-cp311-cp311-macosx_14_0_arm64.whl
+	├── scipy-1.15.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+	├── scipy-1.15.3-cp311-cp311-win_amd64.whl
 ```
 
 ### Modifier Application
