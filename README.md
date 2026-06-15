@@ -114,12 +114,10 @@ ADESSO (Lloyd weight-aware):
 
 ### Installazione
 ```
-1. Download: 3D-Tessellation-v2_3.zip
+1. Download: 3D-Tessellation-v2.3.2.zip
 2. Blender → Preferences → Add-ons → Install
 3. Abilita addon ✓
-4. Click "Install scipy"
-5. Restart Blender
-6. Done!
+4. Done!
 ```
 
 <img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/b599e2cc-a372-43bc-80ab-1c451cf00b75" />
@@ -169,15 +167,6 @@ Angle: 0.1-30° (default 5°)
 ---
 
 ## 🐛 Troubleshooting
-
-### "scipy not installed"
-```
-Fix:
-  1. Click "Install scipy"
-  2. Aspetta 1-2 minuti
-  3. Restart Blender COMPLETAMENTE
-  4. Check scipy → dovrebbe dire "installed"
-```
 
 ### "Troppo lento"
 ```
@@ -321,9 +310,7 @@ NOW (weight-aware Lloyd):
 1. Download: 3D-Tessellation-v2_3.zip.zip
 2. Blender → Preferences → Add-ons → Install
 3. Enable addon ✓
-4. Click "Install scipy"
-5. Restart Blender
-6. Done!
+4. Done!
 ```
 
 <img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/b599e2cc-a372-43bc-80ab-1c451cf00b75" />
@@ -373,15 +360,6 @@ Angle: 0.1–30° (default 5°)
 ---
 
 ## 🐛 Troubleshooting
-
-### "scipy not installed"
-```
-Fix:
-  1. Click "Install scipy"
-  2. Wait 1–2 minutes
-  3. Restart Blender COMPLETELY
-  4. Check scipy → should say "installed"
-```
 
 ### "Too slow"
 ```
