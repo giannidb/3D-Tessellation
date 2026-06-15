@@ -24,15 +24,7 @@ The addon ships with **Smooth SFD**, a Geometry Nodes modifier that blends the c
 1. In Blender, open **Edit → Preferences → Add-ons**.
 2. Click **Install…** and select `3D-Tessellation-2.3.2.zip`.
 3. Enable the addon by ticking its checkbox.
-4. In the **N-panel → Tessellation** tab, click **Install scipy**.  
-   The console will confirm when the installation is complete.
-5. **Restart Blender** to make scipy available.
-
-> **Windows note:** if Blender is installed under *Program Files*, run it as Administrator for the scipy installation step, or install scipy manually from the Command Prompt:
-> ```
-> "C:\path\to\blender\<version>\python\bin\python.exe" -m pip install scipy --user
-> ```
-> Then restart Blender normally.
+4. In the **N-panel → Tessellation** tab.
 
 ---
 
