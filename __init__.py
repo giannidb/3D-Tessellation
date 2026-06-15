@@ -1,5 +1,5 @@
 """
-3D Tessellation Addon v2.3.0 for Blender 5.x.
+3D Tessellation Addon v2.3.2 for Blender 5.x.
 
 Provides two volumetric tessellation algorithms inside arbitrary meshes:
 
@@ -27,8 +27,8 @@ from typing import Any, Optional
 bl_info = {
     "name": "3D Tessellation (Delaunay & Voronoi)",
     "author": "Ergo Cogito Design",
-    "version": (2, 3, 1),
-    "blender": (5, 0, 1),
+    "version": (2, 3, 2),
+    "blender": (5, 0, 0),
     "location": "View3D > Sidebar > Tessellation",
     "description": (
         "Complete 3D tessellation suite: Delaunay + Voronoi Boolean (Cell Fracture)"
@@ -1664,7 +1664,7 @@ def register() -> None:
         type=TessellationProperties
     )
 
-    print("3D Tessellation v2.3.1 registered.")
+    print("3D Tessellation v2.3.2 registered.")
 
 
 def unregister() -> None:
