@@ -1,4 +1,6 @@
-# 3D Tessellation v2.3 🎯
+<img width="1200" height="600" alt="Img_hero_1200x600" src="https://github.com/user-attachments/assets/b112ebbb-6c44-47a9-85b2-020beb8bdb92" />
+
+# 3D Tessellation v2.3.2 🎯
 
 ## L'Addon Definitivo Unificato
 
@@ -13,7 +15,7 @@ Ho replicato un approccio analogo in Blender 5 sfruttando il sistema Geometry No
 
 Per superare questi limiti, con il supporto dell'intelligenza artificiale, ho sviluppato uno script Python che esegue la tassellatura direttamente in Blender, a partire da una mesh manifold. Al codice ho affiancato un gruppo di nodi Geometry Nodes — Smooth SFD — che trasforma il grafo in una mesh continua e raccordata, molto simile alla trabecolatura ossea.
 
-<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/e9618a71-6dc5-4bd0-b6ee-7ec2e5c984bf" />
+<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/00ee10ec-32e1-47c5-bc66-8a6e6b7152f0" />
 
 Combina il meglio di tutte le versioni precedenti in un **unico addon completo**:
 
@@ -112,13 +114,15 @@ ADESSO (Lloyd weight-aware):
 
 ### Installazione
 ```
-1. Download: 3D-Tessellation-2.3.1.zip
+1. Download: 3D-Tessellation-v2_3.zip
 2. Blender → Preferences → Add-ons → Install
 3. Abilita addon ✓
-4. Done!
+4. Click "Install scipy"
+5. Restart Blender
+6. Done!
 ```
 
-<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/180fcaec-e5c4-4413-95ce-1d6a5fd2149c" />
+<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/b599e2cc-a372-43bc-80ab-1c451cf00b75" />
 
 #### Use Weight Paint
 ```
@@ -166,6 +170,14 @@ Angle: 0.1-30° (default 5°)
 
 ## 🐛 Troubleshooting
 
+### "scipy not installed"
+```
+Fix:
+  1. Click "Install scipy"
+  2. Aspetta 1-2 minuti
+  3. Restart Blender COMPLETAMENTE
+  4. Check scipy → dovrebbe dire "installed"
+```
 
 ### "Troppo lento"
 ```
@@ -185,14 +197,14 @@ Fix avanzato:
 
 GPL-3.0 or later
 
-**Versione:** 2.3.1 
-**Data:** 18 Maggio 2026  
+**Versione:** 2.3.2  
+**Data:** 16 Febbraio 2026  
 **Autore:** Ergo Cogito Design  
 **Status:** Production Ready 🎯
 
 ---
 
-# 3D Tessellation v2.3 🎯 — English Version
+# 3D Tessellation v2.3.2 🎯 — English Version
 
 ## The Ultimate Unified Addon
 
@@ -207,7 +219,7 @@ I replicated a similar approach in Blender 5 by leveraging the Geometry Nodes sy
 
 To overcome these limitations, with the support of artificial intelligence, I developed a Python script that performs tessellation directly in Blender, starting from a manifold mesh. Alongside the code, I built a Geometry Nodes group — Smooth SFD — that transforms the graph into a smooth, continuous mesh closely resembling trabecular bone.
 
-<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/e9618a71-6dc5-4bd0-b6ee-7ec2e5c984bf" />
+<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/00ee10ec-32e1-47c5-bc66-8a6e6b7152f0" />
 
 Combines the best of all previous versions into a **single, complete addon**:
 
@@ -306,13 +318,15 @@ NOW (weight-aware Lloyd):
 
 ### Installation
 ```
-1. Download: 3D-Tessellation-2.3.1.zip
+1. Download: 3D-Tessellation-v2_3.zip.zip
 2. Blender → Preferences → Add-ons → Install
 3. Enable addon ✓
-4. Done!
+4. Click "Install scipy"
+5. Restart Blender
+6. Done!
 ```
 
-<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/180fcaec-e5c4-4413-95ce-1d6a5fd2149c" />
+<img width="320" height="180" alt="mqdefault_6s" src="https://github.com/user-attachments/assets/b599e2cc-a372-43bc-80ab-1c451cf00b75" />
 
 #### Use Weight Paint
 ```
@@ -360,6 +374,15 @@ Angle: 0.1–30° (default 5°)
 
 ## 🐛 Troubleshooting
 
+### "scipy not installed"
+```
+Fix:
+  1. Click "Install scipy"
+  2. Wait 1–2 minutes
+  3. Restart Blender COMPLETELY
+  4. Check scipy → should say "installed"
+```
+
 ### "Too slow"
 ```
 Immediate fix:
@@ -378,7 +401,7 @@ Advanced fix:
 
 GPL-3.0 or later
 
-**Version:** 2.3.1
-**Date:** May 18, 2026  
+**Version:** 2.3.2  
+**Date:** February 16, 2026  
 **Author:** Ergo Cogito Design  
 **Status:** Production Ready 🎯
