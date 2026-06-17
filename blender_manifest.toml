@@ -20,19 +20,19 @@ copyright = ["2026 Ergo Cogito Design"]
 # Blender installs the correct wheel automatically at extension load time;
 # no internet connection or manual pip step is required.
 #
-# Blender 5.0 → Python 3.11 → cp311 wheels
-# Blender 5.1 → Python 3.12 → cp312 wheels
+# Blender 5.0    → Python 3.11 → cp311 wheels
+# Blender 5.1.x  → Python 3.13 → cp313 wheels
 wheels = [
     # Python 3.11 (Blender 5.0)
     "./wheels/scipy-1.15.3-cp311-cp311-win_amd64.whl",
     "./wheels/scipy-1.15.3-cp311-cp311-macosx_14_0_arm64.whl",
-    "./wheels/scipy-1.15.3-cp311-cp311-macosx_10_13_x86_64.whl",
+    "./wheels/scipy-1.15.3-cp311-cp311-macosx_10_9_x86_64.whl",
     "./wheels/scipy-1.15.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    # Python 3.12 (Blender 5.1+)
-    "./wheels/scipy-1.15.3-cp312-cp312-win_amd64.whl",
-    "./wheels/scipy-1.15.3-cp312-cp312-macosx_14_0_arm64.whl",
-    "./wheels/scipy-1.15.3-cp312-cp312-macosx_10_13_x86_64.whl",
-    "./wheels/scipy-1.15.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    # Python 3.13 (Blender 5.1.x)
+    "./wheels/scipy-1.15.3-cp313-cp313-win_amd64.whl",
+    "./wheels/scipy-1.15.3-cp313-cp313-macosx_14_0_arm64.whl",
+    "./wheels/scipy-1.15.3-cp313-cp313-macosx_10_13_x86_64.whl",
+    "./wheels/scipy-1.15.3-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
 ]
 
 [build]
