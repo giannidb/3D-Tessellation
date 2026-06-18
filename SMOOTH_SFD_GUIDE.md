@@ -1,6 +1,6 @@
 # Smooth SFD - Edge Smoothing Integration
 
-## 🎨 Novità v2.1.0: Smooth SFD Integrato!
+## 🎨 Novità: Smooth SFD Integrato!
 
 L'addon ora include l'asset **Smooth SFD** di Geometry Nodes per smussare automaticamente gli edge e vertex della tassellazione 3D.
 
@@ -140,7 +140,7 @@ Attenzione: Azione irreversibile!
 
 # Smooth SFD - Edge Smoothing Integration — English Version
 
-## 🎨 What's New in v2.1.0: Smooth SFD Integrated!
+## 🎨 What's New: Smooth SFD Integrated!
 
 The addon now includes the **Smooth SFD** Geometry Nodes asset to automatically smooth the edges and vertices of the 3D tessellation.
 
