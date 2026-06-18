@@ -187,7 +187,7 @@ Fix avanzato:
 GPL-3.0 or later
 
 **Versione:** 2.3.2  
-**Data:** 16 Febbraio 2026  
+**Data:** 16 Giugno 2026  
 **Autore:** Ergo Cogito Design  
 **Status:** Production Ready 🎯
 
@@ -380,6 +380,6 @@ Advanced fix:
 GPL-3.0 or later
 
 **Version:** 2.3.2  
-**Date:** February 16, 2026  
+**Date:** June 16, 2026  
 **Author:** Ergo Cogito Design  
 **Status:** Production Ready 🎯
