@@ -28,7 +28,7 @@ bl_info = {
     "name": "3D Tessellation (Delaunay & Voronoi)",
     "author": "Ergo Cogito Design",
     "version": (2, 3, 2),
-    "blender": (5, 1, 0),
+    "blender": (5, 0, 0),
     "location": "View3D > Sidebar > Tessellation",
     "description": (
         "Complete 3D tessellation suite: Delaunay + Voronoi Boolean (Cell Fracture)"
