@@ -1,5 +1,5 @@
 # 3D Tessellation — Documentation
-**Version 2.3.2 · Blender 5.0.0+ · Ergo Cogito Design**
+**Version 2.3.2 · Extended backward compatibility with Blender 5.0+ · Ergo Cogito Design**
 
 ---
 
